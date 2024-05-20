@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Adding CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <!-- Description about display properties -->
+    <article style="display:flex;">
+      <ul>Block elements
+        <li>Take full-width (100% width) by default</li>
+        <li>Each gets displayed in a new line</li>
+        <li>Width &amp; height properties can be set</li>
+        <li>Can contain other block or inline elements</li>
+      </ul>
+
+      <ul>Inline elements
+        <li>Take only as much space as they need</li>
+        <li>Displayed side by side</li>
+        <li>Don’t accept width or height properties, and top-bottom margin</li>
+        <li>Can be a parent of other inline elements</li>
+        <li>Breaks to new line like a snake instead of block</li>
+      </ul>
+
+      <ul>Inline-block elements - combo of block and inline
+        <li>Take only as much space as they need</li>
+        <li>Displayed side by side</li>
+        <li>Width &amp; height properties can be set</li>
+        <li>Can contain other block or inline elements</li>
+      </ul>
+    </article>
+
+    <!-- Heading explaining what each background color does -->
+    <h1>Click any element to change it's display type, <strong>Green = block</strong>, <strong>Red = inline-block</strong>, <strong>Blue = inline</strong></h1>
+
+    <!-- Clickable divs, spans and paragraphs's that changes CSS display property on click from Block > Inline-block > inline and repeat -->
+    <section>
+      <div style="display:block;">display: block
+        <p>Block elements take up full width of it's container<span>(parent div in this case)</span></p>
+        <p>By default divs and paragraphs are block</p>
+        <p>As paragraphs are also block elements they will fill up full width too</p>
+        <span>I'm a span and ofc inline</span>
+      </div>
+    
+      <div style="display:inline-block;">display: inline-block - Takes up space it needs but will stay as block even if browserwindow is smaller than width of the element
+        <span>This span tho is a snek when blue. Don't believe it? Make browser window smaller ;)</span>
+      </div>
+      
+      <div style="display:inline;">
+        div with display: inline
+      </div>
+      
+      <span>Spans also are inline</span>
+      <span>Which means they also go next to eachother if space allows and will "span" to a new line if need be</span>
+
+      <div style="display:block;margin-bottom: 11rem;">block
+        <div style="display:inline-block">inline-block
+          <div style="display:block;">
+            <p>Paragraph 4 levels deep <span>with los span for 5 levels of nesting</span></p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Buttons to set all elements to same CSS display property -->
+      <div class="plata">
+        <button onclick="allblock()">
+          All block
+        </button>
+
+        <button onclick="allinlineblock()">
+          All inline-block
+        </button>
+
+        <button onclick="allinline()">
+          All inline
+        </button>
+      </div>
+    </section>
+
+    <!-- Adding JavaScript -->
+    <script src="js.js"></script> 
+  </body>
+</html>

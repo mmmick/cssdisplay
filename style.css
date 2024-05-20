@@ -1,0 +1,170 @@
+html {
+  background: black;
+}
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+article {
+  justify-content: space-around;
+}
+
+body > article:nth-child(1) > ul:nth-child(2) > li:nth-child(3)::first-letter {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+ul {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+li {
+  font-weight: normal;
+  color: white;
+  font-size: 16px;
+  margin-left: 1rem;
+}
+
+h1 {
+  background: #393631;
+  color: white;
+  margin: 0;
+  padding: .25rem;
+  text-align: center;
+}
+
+h1 strong {
+  margin-left: 1rem;
+  background:#333333;
+  text-shadow: 0 -1px 4px#FFF, 0 -2px 10px #fff, 0 -10px 20px #fff, 0 -18px 100px #fff;
+}
+
+h1 strong:first-child {
+  color: green;
+}
+
+h1 strong:nth-child(2) {
+  color: darkred;
+}
+
+h1 strong:last-child {
+  color: blue;
+}
+
+section {
+  height: 78.7%;
+  background: black;
+  padding: .5rem;
+}
+
+div {
+  color: white;
+  height: auto;
+  border: 3px solid white;
+  padding: 1rem;
+  margin: .25rem .5rem;
+}
+div p span {
+  margin: 0;
+  font-weight:bold;
+  border:none;
+}
+div p, div span {
+  border: 2px solid white;
+}
+
+p, span {
+  margin: .5rem;
+  color: white;
+  border: 3px solid white;
+}
+
+[style*="block"], p, div {
+  background: green;
+}
+
+[style*="inline"], span {
+  background: blue;
+}
+
+[style*="inline-block"] {
+  background: darkred;
+}
+
+@media screen and (max-width: 700px) {
+  [style*="flex"] {
+    flex-direction: column;
+  }
+}
+
+[style*="flex"] {
+  background: purple;
+}
+
+[style*="grid"] {
+  background: yellow;
+  color: black;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+[style*="grid"]   p{
+  margin: .25rem;
+}
+
+.plata {
+  position: fixed;
+  display: flex !important;
+  left: calc(50% - 137px);
+  bottom: 1rem;
+  padding: 1rem !important;
+  margin: .25rem .5rem !important;
+}
+
+.plata::after {
+  content: "Resize browser to see different behaviours of CSS display property";
+  position: absolute;
+  background: black;
+  padding: 1rem;
+  top: -4.45rem;
+  left: -2.6rem;
+  text-align: center;
+  width: 320px;
+  border-radius: 8px;
+}
+
+.allblock * {
+  display: block !important;
+  background: green;
+}
+
+.allinlineblock * {
+  display: inline-block !important;
+  background: darkred;
+}
+
+.allinline * {
+  display: inline !important;
+  background: blue;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: 1px solid black;
+  padding: .5rem .25rem !important;
+  background: white !important;
+  border-radius: 3px;
+}
+
+button + button {
+  margin-left: .25rem !important;
+}
